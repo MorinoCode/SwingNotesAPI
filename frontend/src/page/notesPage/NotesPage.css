@@ -1,0 +1,47 @@
+/* NotesPage.css */
+
+.notes-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    color: #333;
+  }
+  
+  .notes-main {
+    flex-grow: 1;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .notes-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .notes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-form input {
+    padding: 8px;
+    width: 200px;
+  }
+  
+  .search-form button {
+    padding: 8px 12px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,43 @@
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f39c12, #e74c3c);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    min-height: 60vh;
+  }
+  
+  /* Text animation */
+  .animated-text {
+    animation: fadeIn 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0.5; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  
+ 
+  
