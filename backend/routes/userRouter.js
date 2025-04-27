@@ -18,13 +18,13 @@ const router = express.Router();
  *             required:
  *               - namn
  *               - email
- *               - lösenord
+ *               - password
  *             properties:
  *               namn:
  *                 type: string
  *               email:
  *                 type: string
- *               lösenord:
+ *               password:
  *                 type: string
  *     responses:
  *       201:
@@ -38,7 +38,7 @@ router.post("/signup", signupMiddleware);
  * @swagger
  * /api/user/login:
  *   post:
- *     summary: Logga in med e-post och lösenord
+ *     summary: Logga in med e-post och password
  *     requestBody:
  *       required: true
  *       content:
@@ -47,11 +47,11 @@ router.post("/signup", signupMiddleware);
  *             type: object
  *             required:
  *               - email
- *               - lösenord
+ *               - password
  *             properties:
  *               email:
  *                 type: string
- *               lösenord:
+ *               password:
  *                 type: string
  *     responses:
  *       200:

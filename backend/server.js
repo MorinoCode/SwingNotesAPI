@@ -30,6 +30,7 @@ app.use(express.json());
 connectDB();
 
 // API-routes
+
 app.use("/api/user", userRouter); // Hantera konto & inloggning
 app.use("/api/notes", isUserLoginMiddleware, noteRouter); // Skyddad anteckningsroute
 
