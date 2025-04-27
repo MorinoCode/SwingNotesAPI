@@ -34,7 +34,7 @@ connectDB();
 app.use("/api/user", userRouter); // Hantera konto & inloggning
 app.use("/api/notes", isUserLoginMiddleware, noteRouter); // Skyddad anteckningsroute
 
-// Fångar 404 för icke-existerande routes
+// Fångar 404
 app.use((req, res, next) => {
   res.status(404).json({ message: "❌ Sidan hittades inte." });
 });
