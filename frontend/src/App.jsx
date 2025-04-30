@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./page/homepage/HomePage";
 import LoginPage from "./page/loginPage/LoginPage";
 import SignupPage from "./page/signupPage/SignupPage";
+import ForgottPassword from "./page/forgotPassPage/ForgotPassPage"
 import NotesPage from "./page/notesPage/NotesPage";
 import NoteDetailsPage from "./page/noteDetailsPage/noteDetailsPage";
 import EditPage from "./page/editPage/EditPage";
@@ -22,6 +23,7 @@ const App = () => {
           <Route path={"/"} element={<HomePage />} />
           <Route path={"/login"} element={<LoginPage />} />
           <Route path={"/signup"} element={<SignupPage />} />
+          <Route path={"/forgottPassword"} element={<ForgottPassword />} />
           <Route path={"/:userId/notes"} element={<NotesPage />} />
           <Route path={"/:userId/createNotes"} element={<CreateNote />} />
           <Route path={"/:userId/notes/:noteId"} element={<NoteDetailsPage />}/>

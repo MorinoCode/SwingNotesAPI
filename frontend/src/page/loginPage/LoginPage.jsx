@@ -3,10 +3,11 @@ import { MyContext } from "../../App";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
+import { Link } from "react-router-dom";
 import "./LoginPage.css";
 
 const LoginPage = () => {
-  const { user, setUser } = useContext(MyContext) || {}; 
+  const { user, setUser } = useContext(MyContext) || {};
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
@@ -38,13 +39,11 @@ const LoginPage = () => {
 
         // Navigera korrekt med användarens ID
         navigate(`/${data.userId}/notes`);
-
       } else {
         setError(data);
       }
     } catch (err) {
       console.error(err);
-      
     }
   };
 
@@ -80,13 +79,25 @@ const LoginPage = () => {
 
             {/* Visa felmeddelanden */}
             {error &&
-              error.validationErrors.map((err , index) => (
-                <p key={index} style={{ color: "red" }}>{err.message}</p>
+              error.validationErrors.map((err, index) => (
+                <p key={index} style={{ color: "red" }}>
+                  {err.message}
+                </p>
               ))}
 
-            <button type="submit" className="login-button" onClick={loginHandler}>
+            <button
+              type="submit"
+              className="login-button"
+              onClick={loginHandler}
+            >
               Logga in
             </button>
+            <p className="userMessage">
+              Har du inget konto? <Link to={"/signup"}>Skapa Konto</Link>
+            </p>
+            <p className="userMessage">
+              Glömde lösenord? <Link to={"/forgottPassword"}>Klicka här</Link>
+            </p>
           </form>
         </div>
       </main>

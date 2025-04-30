@@ -72,4 +72,12 @@
   .login-button:hover {
     background-color: #2563eb;
   }
+
+  .login-container .userMessage {
+   margin-top: 1rem;
+
+   a{
+    cursor: pointer;
+   }
+  }
   
