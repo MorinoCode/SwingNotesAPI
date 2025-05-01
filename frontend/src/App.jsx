@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router";
 import HomePage from "./page/homepage/HomePage";
 import LoginPage from "./page/loginPage/LoginPage";

@@ -11,7 +11,7 @@ const fetchNotesMiddleware = async (req, res, next) => {
   try {
     const query = { userId: new mongoose.Types.ObjectId(userId) };
 
-    // Om title skickats med, lägg till regex-sökning
+    
     if (title) {
       query.title = { $regex: new RegExp(title, "i") }; // i = case-insensitive
     }
